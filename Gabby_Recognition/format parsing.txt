@@ -1,0 +1,10 @@
+|nama|devisi|suhu|waktu|denda|hari|status_hadir|
+
+*nama,devisi,suhu,waktu,denda,hari,status_hadir#
+
+
+*Gabby--Tester, ,36,07.45,10000,selasa_2,hadir#
+
+
+format :
+*data,data,data,data#

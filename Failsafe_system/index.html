@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+  
+    <title>Report Failsafe</title>
+  </head>
+  <body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+     <div class="container">   
+    <a class="navbar-brand" href="#">History System</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+       
+        <li class="nav-item active">
+
+        </li>
+        <li class="nav-item active">
+         
+        
+         </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <div class="container">
+  	<div class="row">
+  		<div class="col-12 col-md-12 mt-5">
+  			<h3><i class="fas fa-shopping-cart mr-2"></i>POD 1</h3>
+  			<hr class="hr-menu">
+  			<table id="pod_1" class="table table-bordered">
+			  <thead>
+			    <tr>
+            <th scope="col">No</th>
+            <th scope="col">Waktu</th>
+			      <th scope="col">Kondisi </th>
+			    </tr>
+			  </thead>			 
+			    <tr>		    	
+			    </tr>        
+			  </tbody>   			    	
+        <a class="nav-link js-scroll-trigger" onclick="htmlTableToExcel_1('xlsx')"><i  class="fa fa-dashboard fa-3x"></i>     Export Excel<span class="sr-only">(current)</span></a>
+			</table>    
+		   </div>
+		</div>
+	</div>
+
+
+  <div class="container">
+  	<div class="row">
+  		<div class="col-12 col-md-12 mt-5">
+  			<h3><i class="fas fa-shopping-cart mr-2"></i>POD 2</h3>
+  			<hr class="hr-menu">
+  			<table id="pod_2" class="table table-bordered">
+			  <thead>
+			    <tr>
+            <th scope="col">No</th>
+            <th scope="col">Waktu</th>
+			      <th scope="col">Kondisi </th>
+			    </tr>
+			  </thead>			 
+			    <tr>		    	
+			    </tr>        
+			  </tbody>   		
+        <a class="nav-link js-scroll-trigger" onclick="htmlTableToExcel_2('xlsx')"><i  class="fa fa-dashboard fa-3x"></i>     Export Excel<span class="sr-only">(current)</span></a>	    	
+			</table>    
+		   </div>
+		</div>
+	</div>
+
+  <div class="container">
+  	<div class="row">
+  		<div class="col-12 col-md-12 mt-5">
+  			<h3><i class="fas fa-shopping-cart mr-2"></i>POD 3</h3>
+  			<hr class="hr-menu">
+  			<table id="pod_3" class="table table-bordered">
+			  <thead>
+			    <tr>
+            <th scope="col">No</th>
+            <th scope="col">Waktu</th>
+			      <th scope="col">Kondisi </th>
+			    </tr>
+			  </thead>			 
+			    <tr>		    	
+			    </tr>        
+			  </tbody>   		
+        <a class="nav-link js-scroll-trigger" onclick="htmlTableToExcel_3('xlsx')"><i  class="fa fa-dashboard fa-3x"></i>     Export Excel<span class="sr-only">(current)</span></a>	    	
+			</table>    
+		   </div>
+		</div>
+	</div>
+
+  <div class="container">
+  	<div class="row">
+  		<div class="col-12 col-md-12 mt-5">
+  			<h3><i class="fas fa-shopping-cart mr-2"></i>POD 4</h3>
+  			<hr class="hr-menu">
+  			<table id="pod_4" class="table table-bordered">
+			  <thead>
+			    <tr>
+            <th scope="col">No</th>
+            <th scope="col">Waktu</th>
+			      <th scope="col">Kondisi </th>
+			    </tr>
+			  </thead>			 
+			    <tr>		    	
+			    </tr>        
+			  </tbody>   			    	
+        <a class="nav-link js-scroll-trigger" onclick="htmlTableToExcel_4('xlsx')"><i  class="fa fa-dashboard fa-3x"></i>     Export Excel<span class="sr-only">(current)</span></a>
+			</table>    
+		   </div>
+		</div>
+	</div>
+
+  <div class="container">
+  	<div class="row">
+  		<div class="col-12 col-md-12 mt-5">
+  			<h3><i class="fas fa-shopping-cart mr-2"></i>POD 5</h3>
+  			<hr class="hr-menu">
+  			<table id="pod_5" class="table table-bordered">
+			  <thead>
+			    <tr>
+            <th scope="col">No</th>
+            <th scope="col">Waktu</th>
+			      <th scope="col">Kondisi </th>
+			    </tr>
+			  </thead>			 
+			    <tr>		    	
+			    </tr>        
+			  </tbody>   			    	
+        <a class="nav-link js-scroll-trigger" onclick="htmlTableToExcel_5('xlsx')"><i  class="fa fa-dashboard fa-3x"></i>     Export Excel<span class="sr-only">(current)</span></a>
+			</table>    
+		   </div>
+		</div>
+	</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  
+
+    <script>
+      var config = {
+        apiKey: "AIzaSyAZrh9U9cOSeRjiwzKeyHGd6b0Y54fW54E",
+        authDomain: "failsafe-system.firebaseapp.com",
+        databaseURL: "https://failsafe-system-default-rtdb.firebaseio.com",
+        projectId: "failsafe-system",
+        storageBucket: "failsafe-system.appspot.com",
+        messagingSenderId: "140901644079",
+        appId: "1:140901644079:web:1084e3574df0c452df93da",
+        measurementId: "G-3EFERDQ137"
+    };
+    firebase.initializeApp(config);
+
+ 
+
+
+
+
+
+
+
+var dbRef = firebase.database();
+var address_db = dbRef.ref("history/pod_1");
+var nomor=0;
+var table = document.getElementById("pod_1").getElementsByTagName('tbody')[0];;
+
+var dbRef_2 = firebase.database();
+var address_db_2 = dbRef_2.ref("history/pod_2");
+var nomor_2=0;
+var table_2 = document.getElementById("pod_2").getElementsByTagName('tbody')[0];;
+
+var dbRef_3 = firebase.database();
+var address_db_3 = dbRef_3.ref("history/pod_3");
+var nomor_3=0;
+var table_3 = document.getElementById("pod_3").getElementsByTagName('tbody')[0];;
+
+var dbRef_4 = firebase.database();
+var address_db_4 = dbRef_4.ref("history/pod_4");
+var nomor_4=0;
+var table_4 = document.getElementById("pod_4").getElementsByTagName('tbody')[0];;
+
+var dbRef_5 = firebase.database();
+var address_db_5 = dbRef_5.ref("history/pod_5");
+var nomor_5=0;
+var table_5 = document.getElementById("pod_5").getElementsByTagName('tbody')[0];;
+
+
+ 
+address_db.on("child_added", function(data, prevChildKey) {
+  nomor++;
+  var variabel_db = data.val();
+  var row = table.insertRow(table.rows.length);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  cell1.innerHTML = nomor;
+  cell2.innerHTML = variabel_db.hari;
+  cell3.innerHTML = variabel_db.trouble;
+
+});
+
+
+ 
+address_db_2.on("child_added", function(data, prevChildKey) {
+  nomor_2++;
+  var variabel_db_2 = data.val();
+  var row = table_2.insertRow(table_2.rows.length);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  cell1.innerHTML = nomor_2;
+  cell2.innerHTML = variabel_db_2.hari;
+  cell3.innerHTML = variabel_db_2.trouble;
+
+});
+
+address_db_3.on("child_added", function(data, prevChildKey) {
+  nomor_3++;
+  var variabel_db_3 = data.val();
+  var row = table_3.insertRow(table_3.rows.length);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  cell1.innerHTML = nomor_3;
+  cell2.innerHTML = variabel_db_3.hari;
+  cell3.innerHTML = variabel_db_3.trouble;
+
+});
+
+address_db_4.on("child_added", function(data, prevChildKey) {
+  nomor_4++;
+  var variabel_db_4 = data.val();
+  var row = table_4.insertRow(table_4.rows.length);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  cell1.innerHTML = nomor_4;
+  cell2.innerHTML = variabel_db_4.hari;
+  cell3.innerHTML = variabel_db_4.trouble;
+
+});
+
+address_db_5.on("child_added", function(data, prevChildKey) {
+  nomor_5++;
+  var variabel_db_5 = data.val();
+  var row = table_5.insertRow(table_5.rows.length);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  cell1.innerHTML = nomor_5;
+  cell2.innerHTML = variabel_db_5.hari;
+  cell3.innerHTML = variabel_db_5.trouble;
+
+});
+
+
+
+function htmlTableToExcel_1(type){
+ var data = document.getElementById('pod_1');
+ var excelFile = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+ XLSX.write(excelFile, { bookType: type, bookSST: true, type: 'base64' });
+ XLSX.writeFile(excelFile, 'Report POD 1.xlsx');
+}
+
+function htmlTableToExcel_2(type){
+ var data = document.getElementById('pod_2');
+ var excelFile = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+ XLSX.write(excelFile, { bookType: type, bookSST: true, type: 'base64' });
+ XLSX.writeFile(excelFile, 'Report POD 2.xlsx');
+}
+
+function htmlTableToExcel_3(type){
+ var data = document.getElementById('pod_3');
+ var excelFile = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+ XLSX.write(excelFile, { bookType: type, bookSST: true, type: 'base64' });
+ XLSX.writeFile(excelFile, 'Report POD 3.xlsx');
+}
+
+function htmlTableToExcel_4(type){
+ var data = document.getElementById('pod_4');
+ var excelFile = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+ XLSX.write(excelFile, { bookType: type, bookSST: true, type: 'base64' });
+ XLSX.writeFile(excelFile, 'Report POD 4.xlsx');
+}
+
+function htmlTableToExcel_5(type){
+ var data = document.getElementById('pod_5');
+ var excelFile = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+ XLSX.write(excelFile, { bookType: type, bookSST: true, type: 'base64' });
+ XLSX.writeFile(excelFile, 'Report POD 5.xlsx');
+}
+
+
+
+</script>
+  </body>
+</html>
