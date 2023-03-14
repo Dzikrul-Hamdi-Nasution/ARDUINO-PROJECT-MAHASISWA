@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Loger</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="bootstrap/js/style.js"></script> -->
+    <link rel="stylesheet" href="Station_data.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <form class="d-flex">
+            <span  class="navbar-brand mb-0 h1"> <a href="Station_data.html"> <img src="assets/img/logo.png"   alt="icon" style="width: 60px;"></a></span>
+            <!--  <button onclick="oke()" type="submit" class="btn btn-primary btn-block">LogOut</button>-->
+           <span class="navbar-brand mb-0 h1"><h6 id="Beban" class="card-subtitle mb-2 text-muted">Beban : Wait</h6></span>
+           <span  class="navbar-brand mb-0 h1"><h6 id="kontrol" class="card-subtitle mb-2 text-muted">Manual : True</h6></span>
+           <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitches"onclick="tombol_kendali()" >
+          <label  class="custom-control-label" for="customSwitches"></label>
+          
+          <span  class="navbar-brand mb-0 h1"><h6 id="relay_kontrol" class="card-subtitle mb-2 text-muted">Relay : Off</h6></span>
+          <div class="custom-control custom-switch" id ="ini_tombol">
+         <input type="checkbox" class="custom-control-input" id="relay_switch"onclick="tombol_kendali_relay()" >
+         <label  class="custom-control-label" for="relay_switch"></label>
+
+        </div>
+             <!--<span class="navbar-brand mb-0 h1"><h6 id="Timer" class="card-subtitle mb-2 text-muted">Timer : On</h6></span>
+            <span class="navbar-brand mb-0 h1"><h6 id="Start" class="card-subtitle mb-2 text-muted">Start : -</h6></span>
+            <span class="navbar-brand mb-0 h1"><h6 id="Stop" class="card-subtitle mb-2 text-muted">Stop : -</h6></span>-->
+          </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="container">
+
+         
+          
+            <div class="row">
+            
+                <div class="col-md-6">
+                    <div class="kotaka p-3 mb-5 rounded" style="float: left;">
+                        <div class="kotak1 card" style="width: 18rem;">
+                            <div class=" card-body">
+                                <h5 class="card-title">Tegangan <img src="assets/img/tegangan.png" alt="" style="width: 40px;"></h5>
+                                <h5 id="parameter_tegangan" class="card-subtitle mb-2 text-muted" href="#" ></h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Tegangan ( Volt ) :</h6>
+                                <p class="card-text"><input style="border: none;" type="text" id="tegangan" readonly /></p>
+                                <li data-toggle="modal" data-target="#tegangan_set" class="btn btn-success">Set Tegangan</li>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kotakb p-3 mb-5 bg-body rounded" style="float: right;">
+                        <div class="card" style="width: 18rem; float: right;">
+                            <div class="kotak2 card-body">
+                                <h5 class="card-title">Arus <img src="assets/img/arus.png" alt="" style="width: 50px;"></h5>
+                                <h5 id="parameter_arus" class="card-subtitle mb-2 text-muted" href="#" ></h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Arus Beban :</h6>
+                                <p class="card-text"><input style="border: none;" type="text" id="arus" readonly /></p>
+                                <li data-toggle="modal" data-target="#mydaftar" class="btn btn-success">Set Arus</li>                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="kotakc p-3 mb-5 bg-body rounded" style="float: left;">
+                        <div class="card" style="width: 18rem;">
+                            <div class="kotak3 card-body">
+                                <h5 class="card-title">Suhu <img src="assets/img/suhu.png" alt="" style="width: 50px;"></h5>
+                                <h5 id="parameter_suhu" class="card-subtitle mb-2 text-muted" href="#" ></h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Suhu Kabel :</h6>
+                                <p class="card-text"><input style="border: none;" type="text" id="suhu" readonly /></p>
+                                <li data-toggle="modal" data-target="#mysuhu" class="btn btn-success">Set Suhu</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kotakd p-3 mb-5 bg-body rounded" style="float: right;">
+                        <div class="card" style="width: 18rem; float: right;">
+                            <div class="kotak4 card-body">
+                                <h5 class="card-title">Daya<img src="assets/img/daya.png" alt="" style="width: 50px;"></h5>
+                                
+                                <h6 class="card-subtitle mb-2 text-muted">Daya Beban ( Wh ) :</h6>
+                                <p class="card-text"><input style="border: none;" type="text" id="daya" readonly /></p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    
+    <script src="index.js"></script>
+    <script src="tombol.css"></script>
+
+
+
+    <div id="tegangan_set" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Set Tegangan Offset Input</h4>
+          </div>
+          <div class="modal-body">
+            <form>    
+        <div class="form-group">
+          <label for="exampleInputEmail1">Beban akan terputus jika Tegangan melebihi  offset</label>
+          <input type="number" class="form-control" id="set_tegangan_max" placeholder="Tegangan MAX ( Volt AC )">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Beban akan terputus jika Tegangan dibawah offset</label>
+          <input type="number" class="form-control" id="set_tegangan_min" placeholder="Tegangan MIN ( Volt AC )">
+        </div>
+      </form>
+          </div>
+          <div class="modal-footer">      
+           <button onclick="update_tegangan()" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mydaftar" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Set Arus Maksimal Beban</h4>
+          </div>
+          <div class="modal-body">
+            <form>    
+        <div class="form-group">
+          <label for="exampleInputEmail1">Beban akan terputus jika arus melebihi parameter</label>
+          <input type="number" class="form-control" id="set_arus" placeholder="Arus ( Mili Ampere )">
+        </div>
+      </form>
+          </div>
+          <div class="modal-footer">      
+           <button onclick="update_arus()" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mysuhu" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Set Suhu Maksimal Kabel</h4>
+          </div>
+          <div class="modal-body">
+            <form>    
+        <div class="form-group">
+          <label for="exampleInputEmail1">Beban akan terputus jika Suhu melebihi parameter</label>
+          <input type="number" class="form-control" id="set_suhu" placeholder="Suhu ( Celcius )">
+        </div>
+      </form>
+          </div>
+          <div class="modal-footer">      
+           <button onclick="update_suhu()" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mykwh" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Set Kwh Maksimal Beban</h4>
+          </div>
+          <div class="modal-body">
+            <form>    
+        <div class="form-group">
+          <label for="exampleInputEmail1">Beban akan terputus jika Kwh melebihi parameter</label>
+          <input type="number" class="form-control" id="set_kwh" placeholder="Kwh">
+        </div>
+      </form>
+          </div>
+          <div class="modal-footer">      
+           <button onclick="update_Kwh()" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+           <button onclick="non_Kwh()" type="button" class="btn btn-success" data-dismiss="modal">Non Aktif</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+</html>

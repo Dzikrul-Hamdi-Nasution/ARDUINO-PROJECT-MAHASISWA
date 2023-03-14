@@ -1,0 +1,19 @@
+-tampilan 1
+jam menit detik
+tanggal
+kondisi jaringan
+
+-tampilan 2
+tegangan
+arus
+daya kwh
+suhu
+
+-tampilan 3
+timer on/off
+max arus
+max kwh
+status beban
+
+-tampilan 4
+status keseluruhan
